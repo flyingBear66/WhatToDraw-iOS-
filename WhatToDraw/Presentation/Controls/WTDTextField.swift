@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ZORTextField: UITextField {
+class WTDTextField: UITextField {
 
 }

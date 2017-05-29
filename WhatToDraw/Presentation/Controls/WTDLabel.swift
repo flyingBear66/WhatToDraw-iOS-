@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ZORLabel: UILabel {
+class WTDLabel: UILabel {
 
 }

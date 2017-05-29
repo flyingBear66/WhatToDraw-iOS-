@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ZORViewController: UIViewController {    
+class WTDViewController: UIViewController {    
     
     override func viewDidLoad() {
         super.viewDidLoad()
