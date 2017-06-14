@@ -11,27 +11,6 @@ import Moya_ObjectMapper
 import RxOptional
 import UIKit
 
-// MARK: - Provider setup
-private func JSONResponseDataFormatter(_ data: Data) -> Data {
-    do {
-        let dataAsJSON = try JSONSerialization.jsonObject(with: data)
-        let prettyData =  try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)
-        return prettyData
-    } catch {
-        return data //fallback to original data if it cant be serialized
-    }
-}
-
-let MockyProvider = MoyaProvider<Mocky>(plugins: [NetworkLoggerPlugin(verbose: true, responseDataFormatter: JSONResponseDataFormatter)])
-
-
-// MARK: - Provider support
-private extension String {
-    var urlEscapedString: String {
-        return self.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
-    }
-}
-
 public enum Mocky {
     case getLokmas
     case getUser
@@ -58,7 +37,7 @@ extension Mocky: TargetType {
     public var path: String {
         switch self {
         case .getLokmas:
-            return "/"
+            return "/592c76eb110000c0066df85f"
         case .getUser:
             return "/"
         }
@@ -82,7 +61,7 @@ extension Mocky: TargetType {
     public var sampleData: Data {
         switch self {
         case .getLokmas:
-            return "".data(using: String.Encoding.utf8)!
+            return "{\"latitude\": 45.45 , \"longitude\": 564.456}".data(using: String.Encoding.utf8)!
         case .getUser:
             return "".data(using: String.Encoding.utf8)!
         }

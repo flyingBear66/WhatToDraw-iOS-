@@ -9,14 +9,14 @@ target 'WhatToDraw' do
 
   pod 'CocoaLumberjack/Swift'
   pod 'DZNEmptyDataSet'
-  pod 'ObjectMapper', '~> 2.2'
   pod 'Moya-ObjectMapper/RxSwift' , :podspec => 'https://raw.githubusercontent.com/MacroYau/Moya-ObjectMapper/master/Moya-ObjectMapper.podspec'
   pod 'Moya/RxSwift'
   pod 'ObjectMapper', '~> 2.2'
-  pod 'Swinject', '~> 2.1.0'
-  pod 'RxSwift', '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
   pod 'RxOptional'
+  pod 'RxSwift', '~> 3.0'
+  pod 'RxSwiftUtilities', '~> 1.0.1'
+  pod 'Swinject', '~> 2.1.0'
 
   target 'WhatToDrawTests' do
     inherit! :search_paths

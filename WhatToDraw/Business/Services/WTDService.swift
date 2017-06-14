@@ -6,8 +6,20 @@
 //  Copyright © 2017 Ozgun Zor. All rights reserved.
 //
 
-import UIKit
+import Foundation
+import RxSwift
+import Moya
+import CocoaLumberjack
 
-class WTDService: NSObject {
 
+class WTDService {
+    
+    fileprivate let provider = RxMoyaProvider<Mocky>()
+    
+    func getLocations() -> Observable<LocationModel> {
+        return provider.request(.getLokmas).mapObject(LocationModel.self)
+    }
+    
+
+    
 }

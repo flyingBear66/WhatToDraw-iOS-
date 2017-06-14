@@ -10,4 +10,6 @@ import UIKit
 
 class WTDViewModel: NSObject {
     
+    let provider = RxMoyaProvider<Mocky>()
+    
 }

@@ -6,9 +6,12 @@
 //  Copyright © 2017 Ozgun Zor. All rights reserved.
 //
 
+import RxSwift
 import UIKit
 
 class WTDViewController: UIViewController {    
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
